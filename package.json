@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "build:ui": "rm -rf dist && cd /home/iheb/js-practice/fso-react/ && npm run build && cp -r dist /home/iheb/js-practice/fso-node/phonebook-backend/"
   },
   "repository": {
     "type": "git",

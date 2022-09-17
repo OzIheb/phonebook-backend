@@ -7,7 +7,7 @@ app.use(express.json());
 
 app.use(cors());
 
-app.use(express.static("build"));
+app.use(express.static("dist"));
 
 app.use(morgan(":method :url :status :response-time ms :req[content-length]"));
 
@@ -38,7 +38,7 @@ app.get("/api/persons", (request, response) => {
   response.json(data);
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 app.listen(PORT, () => {
   console.log(`app is running on ${PORT}`);
 });
